@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void evaluate(View view) {
         //initial setup for results string
-        //define the context and the duration of the toast
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
         StringBuilder resultsText = new StringBuilder("your results:");
 
         //check whether answer 1 is correct:
@@ -104,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Finally, make and show the toast using all of the results.
-        Toast toast = Toast.makeText(context, resultsText, duration);
+        Toast toast = Toast.makeText(this, resultsText, Toast.LENGTH_SHORT);
         toast.show();
 
     }
