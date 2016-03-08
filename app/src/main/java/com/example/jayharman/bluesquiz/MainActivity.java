@@ -61,14 +61,12 @@ public class MainActivity extends AppCompatActivity {
             resultsText.append("\nQuestion 2 was wrong...");
         }
 
-        Resources res = getResources();
-        String[] themes = res.getStringArray(R.array.blues_themes);
         // Check whether answer three is correct
         // First we get the array of Blues themes
+        String[] themes = getResources().getStringArray(R.array.blues_themes);
 
 
-        if (questionThreeAnswer.getText().toString().equalsIgnoreCase(themes[0]) ||
-                questionThreeAnswer.getText().toString().equalsIgnoreCase(themes[1])) {
+        String questionThreeAnswerText = questionThreeAnswer.getText().toString();
 
         // Check if the answer was any of the themes
         if (questionThreeAnswerText.equalsIgnoreCase(themes[0]) || questionThreeAnswerText.equalsIgnoreCase(themes[1])) {
