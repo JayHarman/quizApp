@@ -1,182 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jayharman.bluesquiz.MainActivity">
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Blues Quiz!"
-            android:id="@+id/title" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="1. When did blues music originate?"
-            android:id="@+id/questionOne"
-            android:layout_below="@+id/title"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="2. From what genres did blues develop?"
-            android:id="@+id/questionTwo"
-            android:layout_below="@+id/questionOneGroup"
-            android:layout_alignParentStart="true" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="European folk music"
-            android:id="@+id/questionTwoEuFolk"
-            android:layout_below="@+id/questionTwo"
-            android:layout_alignParentStart="true"
-            android:checked="false" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rock &amp; Roll"
-            android:id="@+id/questionTwoRock"
-            android:layout_alignTop="@+id/questionTwoEuFolk"
-            android:layout_alignParentEnd="true"
-            android:checked="false" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Classical music"
-            android:id="@+id/questionTwoClassical"
-            android:layout_below="@+id/questionTwoEuFolk"
-            android:layout_alignParentStart="true"
-            android:checked="false" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="African Music"
-            android:id="@+id/questionTwoAfrican"
-            android:layout_below="@+id/questionTwoRock"
-            android:layout_alignParentEnd="true"
-            android:checked="false" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="3. What is a primary theme of blues music?"
-            android:id="@+id/questionThree"
-            android:layout_below="@+id/questionTwoClassical"
-            android:layout_alignParentStart="true" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/questionThreeAnswer"
-            android:layout_below="@+id/questionThree"
-            android:layout_alignParentStart="true"
-            android:text="Enter answer here" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="4. Which group pioneered blues music?"
-            android:id="@+id/questionFour"
-            android:layout_below="@+id/questionThreeAnswer"
-            android:layout_alignParentStart="true" />
-
-        <RadioGroup
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/questionFour"
-            android:id="@+id/questionFourGroup">
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.example.jayharman.bluesquiz.MainActivity">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="European Immigrants"
-                android:id="@+id/questionFourEuropean"
-                android:layout_below="@+id/questionFour"
-                android:layout_alignParentStart="true"
-                android:checked="false" />
+    <LinearLayout
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        >
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="African-American southerners"
-                android:id="@+id/questionFourAASouth"
-                android:layout_below="@+id/questionFourEuropean"
-                android:layout_alignEnd="@+id/questionOne"
-                android:checked="false" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="White Southerners"
-                android:id="@+id/questionFourWhiteSouth"
-                android:layout_below="@+id/questionFourAASouth"
-                android:layout_alignEnd="@+id/questionTwoAfrican"
-                android:checked="false" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Check my answers!"
-                android:id="@+id/evalButton"
-                android:layout_gravity="right"
-                android:onClick="evaluate"/>
-        </RadioGroup>
+        <TextView
+            android:id="@+id/questionOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_1"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/questionOne"
             android:id="@+id/questionOneGroup"
-            android:layout_alignParentStart="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="In the 1950s"
                 android:id="@+id/questionOne1950"
-                android:layout_below="@+id/questionOne"
-                android:layout_alignParentStart="true" />
-
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In the 1890s"
+                android:text="@string/question_1_1950s"/>
+
+            <RadioButton
                 android:id="@+id/questionOne1890"
-                android:layout_below="@+id/questionOne1950"
-                android:layout_alignParentStart="true" />
-
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In the 1850s"
+                android:text="@string/question_1_1890s"/>
+
+            <RadioButton
                 android:id="@+id/questionOne1850"
-                android:layout_below="@+id/questionOne"
-                android:layout_alignParentEnd="true" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/question_1_1850s"/>
         </RadioGroup>
-    </RelativeLayout>
-    </ScrollView>
+
+        <TextView
+            android:id="@+id/questionTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_2"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TableLayout
+            android:id="@+id/checkboxTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/questionTwoEuFolk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/question_2_eu_folk"/>
+
+                <CheckBox
+                    android:id="@+id/questionTwoRock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/question_2_rock"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/questionTwoClassical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/question_2_classical"/>
+
+                <CheckBox
+                    android:id="@+id/questionTwoAfrican"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/question_2_african"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/questionThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_3"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/questionThreeAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/question_3_placeholder"/>
+
+        <TextView
+            android:id="@+id/questionFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/question_4"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <RadioGroup
+            android:id="@+id/questionFourGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RadioButton
+                android:id="@+id/questionFourEuropean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/question_4_european_immigrants"/>
+
+            <RadioButton
+                android:id="@+id/questionFourAASouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/question_4_african_american_southerners"/>
+
+            <RadioButton
+                android:id="@+id/questionFourWhiteSouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/question_4_white_southerners"/>
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/evalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:onClick="evaluate"
+            android:text="@string/check_my_answers"/>
+
+    </LinearLayout>
+</ScrollView>
 
