@@ -80,13 +80,8 @@ public class MainActivity extends AppCompatActivity {
         String[] themes = res.getStringArray(R.array.blues_themes);
 
         //if they correctly got any of the themes, let them know.
-        if (questionThreeAnswer.getText().toString().equals(themes[0])) {
-            resultsText.append("\nQuestion 3 was right!");
-        } else if (questionThreeAnswer.getText().toString().equals(themes[1])) {
-            resultsText.append("\nQuestion 3 was right!");
-        } else if (questionThreeAnswer.getText().toString().equals(themes[2])) {
-            resultsText.append("\nQuestion 3 was right!");
-        } else if (questionThreeAnswer.getText().toString().equals(themes[3])) {
+        if (questionThreeAnswer.getText().toString().equalsIgnoreCase(themes[0]) ||
+                questionThreeAnswer.getText().toString().equalsIgnoreCase(themes[1])) {
             resultsText.append("\nQuestion 3 was right!");
         } else {
             // if they did not, also let them know
