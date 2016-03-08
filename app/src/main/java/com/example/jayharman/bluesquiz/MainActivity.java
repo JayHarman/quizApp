@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void evaluate(View view) {
         // Set up results StringBuilder
-        StringBuilder resultsText = new StringBuilder("Your results:");
+        StringBuilder resultsText = new StringBuilder(getString(R.string.your_results));
 
         // Check whether answer one is correct
         if (questionOneAnswer.isChecked()) {
-            resultsText.append("\nQuestion 1 was right!");
+            resultsText.append(getString(R.string.question_1_right));
         } else {
-            resultsText.append("\nQuestion 1 was wrong...");
+            resultsText.append(getString(R.string.question_1_wrong));
         }
 
         // Check whether answer two is correct
@@ -52,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
         Boolean wrongAnswerChecked = questionTwoFirstWrong.isChecked() || questionTwoSecondWrong.isChecked();
 
         if (rightAnswersChecked && (!wrongAnswerChecked)) {
-            resultsText.append("\nQuestion 2 was completely right!");
+            resultsText.append(getString(R.string.question_2_right));
         } else if (rightAnswersChecked) {
-            resultsText.append("\nQuestion 2 had some right and some wrong");
+            resultsText.append(getString(R.string.question_2_some_wrong));
         } else if (anyRightAnswers) {
-            resultsText.append("\nQuestion 2 had one part right");
+            resultsText.append(getString(R.string.question_2_some_right));
         } else {
-            resultsText.append("\nQuestion 2 was wrong...");
+            resultsText.append(getString(R.string.question_2_wrong));
         }
 
         // Check whether answer three is correct
@@ -70,16 +70,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if the answer was any of the themes
         if (questionThreeAnswerText.equalsIgnoreCase(themes[0]) || questionThreeAnswerText.equalsIgnoreCase(themes[1])) {
-            resultsText.append("\nQuestion 3 was right!");
+            resultsText.append(getString(R.string.question_3_right));
         } else {
-            resultsText.append("\nQuestion 3 was wrong...");
+            resultsText.append(getString(R.string.question_3_wrong));
         }
 
         // Check whether answer four is correct
         if (questionFourAnswer.isChecked()) {
-            resultsText.append("\nQuestion 4 was right!");
+            resultsText.append(getString(R.string.question_4_right));
         } else {
-            resultsText.append("\nQuestion 4 was wrong...");
+            resultsText.append(getString(R.string.question_4_wrong));
         }
 
         //Finally, make and show the toast using all of the results.

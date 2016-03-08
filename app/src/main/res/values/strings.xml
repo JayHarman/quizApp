@@ -1,11 +1,6 @@
 <resources>
     <string name="app_name">Blues Quiz</string>
 
-
-
-
-
-
     <string name="quiz_title">Blues Quiz!</string>
 
     <string name="question_1">1. When did blues music originate?</string>
@@ -24,17 +19,27 @@
     <string name="question_3_travel">Travel</string>
 
     <string name="question_4">4. Which group pioneered blues music?</string>
+    <string name="question_3_hint">Enter answer here</string>
     <string name="question_4_european_immigrants">European Immigrants</string>
     <string name="question_4_african_american_southerners">African-American Southerners</string>
     <string name="question_4_white_southerners">White Southerners</string>
 
-
-
     <string name="check_my_answers">Check my answers!</string>
 
 
+    <string name="your_results">Your results:\n</string>
+    <string name="question_1_right">Question 1 was right!\n</string>
+    <string name="question_1_wrong">Question 1 was wrong.\n</string>
 
+    <string name="question_2_right">Question 2 was right!\n</string>
+    <string name="question_2_some_wrong">Question 2 has all the right options selected, and some wrong options.\n</string>
+    <string name="question_2_some_right">Question 2 has one correct option selected.\n</string>
+    <string name="question_2_wrong">Question 2 was wrong.\n</string>
 
-    <string name="question_3_placeholder">Enter answer here</string>
+    <string name="question_3_right">Question 3 was right!\n</string>
+    <string name="question_3_wrong">Question 3 was wrong.\n</string>
+
+    <string name="question_4_right">Question 4 was right!\n</string>
+    <string name="question_4_wrong">Question 4 was wrong.\n</string>
 
 </resources>
