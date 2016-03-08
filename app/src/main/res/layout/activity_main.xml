@@ -10,15 +10,13 @@
             tools:context="com.example.jayharman.bluesquiz.MainActivity">
 
     <LinearLayout
-        android:id="@+id/scrollView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:focusableInTouchMode="true"
+        android:orientation="vertical"
         >
 
         <TextView
-            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/quiz_title"
@@ -26,38 +24,34 @@
             />
 
         <TextView
-            android:id="@+id/questionOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question_1"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <RadioGroup
-            android:id="@+id/questionOneGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/questionOne1950"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/question_1_1950s"/>
 
             <RadioButton
-                android:id="@+id/questionOne1890"
+                android:id="@+id/question_1_1890"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/question_1_1890s"/>
 
             <RadioButton
-                android:id="@+id/questionOne1850"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/question_1_1850s"/>
         </RadioGroup>
 
         <TextView
-            android:id="@+id/questionTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question_2"
@@ -71,14 +65,14 @@
             <TableRow>
 
                 <CheckBox
-                    android:id="@+id/questionTwoEuFolk"
+                    android:id="@+id/question_2_eu_folk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:text="@string/question_2_eu_folk"/>
 
                 <CheckBox
-                    android:id="@+id/questionTwoRock"
+                    android:id="@+id/question_2_rock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -89,14 +83,14 @@
             <TableRow>
 
                 <CheckBox
-                    android:id="@+id/questionTwoClassical"
+                    android:id="@+id/question_2_classical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:text="@string/question_2_classical"/>
 
                 <CheckBox
-                    android:id="@+id/questionTwoAfrican"
+                    android:id="@+id/question_2_african"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -108,49 +102,42 @@
 
 
         <TextView
-            android:id="@+id/questionThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question_3"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <EditText
-            android:id="@+id/questionThreeAnswer"
+            android:id="@+id/question_3_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:hint="@string/question_3_hint"/>
 
         <TextView
-            android:id="@+id/questionFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/question_4"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <RadioGroup
-            android:id="@+id/questionFourGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
 
             <RadioButton
-                android:id="@+id/questionFourEuropean"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="@string/question_4_european_immigrants"/>
 
             <RadioButton
-                android:id="@+id/questionFourAASouth"
+                android:id="@+id/question_4_african_american_southerners"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="@string/question_4_african_american_southerners"/>
 
             <RadioButton
-                android:id="@+id/questionFourWhiteSouth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
@@ -159,7 +146,7 @@
 
 
         <Button
-            android:id="@+id/evalButton"
+            android:id="@+id/eval_answers_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
