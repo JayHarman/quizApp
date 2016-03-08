@@ -10,7 +10,8 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    //Views to store for evaluation
+
+    // Views to hold on to for evaluation
     RadioButton mQuestionOneAnswer;
     CheckBox mQuestionTwoFirstAnswer;
     CheckBox mQuestionTwoSecondAnswer;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //store views
+
         mQuestionOneAnswer = (RadioButton) findViewById(R.id.question_1_1890);
         mQuestionTwoFirstAnswer = (CheckBox) findViewById(R.id.question_2_african);
         mQuestionTwoSecondAnswer = (CheckBox) findViewById(R.id.question_2_eu_folk);
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void evaluate(View view) {
+
         // Set up StringBuilder to hold the results
         StringBuilder resultsText = new StringBuilder(getString(R.string.your_results));
 
@@ -64,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // Check whether answer three is correct
         // First we get the array of Blues themes
         String[] themes = getResources().getStringArray(R.array.blues_themes);
-
-
+        
         String questionThreeAnswerText = mQuestionThreeAnswer.getText().toString();
 
         // Check if the answer was any of the themes
