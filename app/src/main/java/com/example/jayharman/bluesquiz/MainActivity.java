@@ -1,6 +1,5 @@
 package com.example.jayharman.bluesquiz;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,58 +36,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void evaluate(View view) {
-        //initial setup for results string
-        StringBuilder resultsText = new StringBuilder("your results:");
+        // Set up results StringBuilder
+        StringBuilder resultsText = new StringBuilder("Your results:");
 
-        //check whether answer 1 is correct:
+        // Check whether answer one is correct
         if (questionOneAnswer.isChecked()) {
-            //if it is, let them know.
             resultsText.append("\nQuestion 1 was right!");
         } else {
-            //if it is not, let them know.
             resultsText.append("\nQuestion 1 was wrong...");
         }
 
-        //Check whether answer 2 is correct:
-        //make a boolean to represent if they checked both the correct answers
+        // Check whether answer two is correct
         Boolean rightAnswersChecked = questionTwoFirstAnswer.isChecked() && questionTwoSecondAnswer.isChecked();
-        //make a boolean to check if they got any right answers
         Boolean anyRightAnswers = questionTwoFirstAnswer.isChecked() || questionTwoSecondAnswer.isChecked();
-        //make a boolean to represent if they checked any wrong answers
         Boolean wrongAnswerChecked = questionTwoFirstWrong.isChecked() || questionTwoSecondWrong.isChecked();
 
-
-        //check the booleans:
         if (rightAnswersChecked && (!wrongAnswerChecked)) {
-            //if only the right answers are checked, let them know
             resultsText.append("\nQuestion 2 was completely right!");
         } else if (rightAnswersChecked) {
-            //if they got the right answers checked but also checked some wrong ones:
             resultsText.append("\nQuestion 2 had some right and some wrong");
         } else if (anyRightAnswers) {
-            //if they got any right answers:
             resultsText.append("\nQuestion 2 had one part right");
-
         } else {
-            //if they got none right:
             resultsText.append("\nQuestion 2 was wrong...");
         }
 
-        //Check whether answer 3 is correct:
-        //first we get the array of themes
         Resources res = getResources();
         String[] themes = res.getStringArray(R.array.blues_themes);
+        // Check whether answer three is correct
+        // First we get the array of Blues themes
 
-        //if they correctly got any of the themes, let them know.
+
         if (questionThreeAnswer.getText().toString().equalsIgnoreCase(themes[0]) ||
                 questionThreeAnswer.getText().toString().equalsIgnoreCase(themes[1])) {
+
+        // Check if the answer was any of the themes
+        if (questionThreeAnswerText.equalsIgnoreCase(themes[0]) || questionThreeAnswerText.equalsIgnoreCase(themes[1])) {
             resultsText.append("\nQuestion 3 was right!");
         } else {
-            // if they did not, also let them know
             resultsText.append("\nQuestion 3 was wrong...");
         }
 
-        //Check whether answer 4 is correct:
+        // Check whether answer four is correct
         if (questionFourAnswer.isChecked()) {
             resultsText.append("\nQuestion 4 was right!");
         } else {
@@ -98,6 +87,5 @@ public class MainActivity extends AppCompatActivity {
         //Finally, make and show the toast using all of the results.
         Toast toast = Toast.makeText(this, resultsText, Toast.LENGTH_SHORT);
         toast.show();
-
     }
 }
