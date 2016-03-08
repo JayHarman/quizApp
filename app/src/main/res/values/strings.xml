@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">Blues Quiz</string>
+
+    <string name="quiz_title">Blues Quiz!</string>
+
+    <string name="question_1">1. When did blues music originate?</string>
+    <string name="question_1_1950s">In the 1950s</string>
+    <string name="question_1_1890s">In the 1890s</string>
+    <string name="question_1_1850s">In the 1850s</string>
+
+    <string name="question_2">2. From what genres did blues develop?</string>
+    <string name="question_2_eu_folk">European Folk Music</string>
+    <string name="question_2_rock">Rock &amp; Roll</string>
+    <string name="question_2_classical">Classical Music</string>
+    <string name="question_2_african">African Music</string>
+
+    <string name="question_3">3. What is a primary theme of blues music?</string>
+    <string name="question_3_sexual_liberation">Sexual liberation</string>
+    <string name="question_3_travel">Travel</string>
+
+    <string name="question_4">4. Which group pioneered blues music?</string>
+    <string name="question_3_hint">Enter answer here</string>
+    <string name="question_4_european_immigrants">European Immigrants</string>
+    <string name="question_4_african_american_southerners">African-American Southerners</string>
+    <string name="question_4_white_southerners">White Southerners</string>
+
+    <string name="check_my_answers">Check my answers!</string>
+
+
+    <string name="your_results">Your results:\n</string>
+    <string name="question_1_right">Question 1 was right!\n</string>
+    <string name="question_1_wrong">Question 1 was wrong.\n</string>
+
+    <string name="question_2_right">Question 2 was right!\n</string>
+    <string name="question_2_some_wrong">Question 2 has all the right options selected, and some wrong options.\n</string>
+    <string name="question_2_some_right">Question 2 has one correct option selected.\n</string>
+    <string name="question_2_wrong">Question 2 was wrong.\n</string>
+
+    <string name="question_3_right">Question 3 was right!\n</string>
+    <string name="question_3_wrong">Question 3 was wrong.\n</string>
+
+    <string name="question_4_right">Question 4 was right!\n</string>
+    <string name="question_4_wrong">Question 4 was wrong.\n</string>
+
 </resources>

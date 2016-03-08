@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="blues_themes">
-        <item>sexual liberation</item>
-        <item>Sexual liberation</item>
-        <item>travel</item>
-        <item>Travel</item>
+        <item>@string/question_3_sexual_liberation</item>
+        <item>@string/question_3_travel</item>
     </string-array>
 
 </resources>
